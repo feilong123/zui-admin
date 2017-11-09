@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>数据表格-z-admin</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/zui/dist/css/zui.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/zui/dist/css/zui-theme.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/datatables.net-select-bs/css/select.bootstrap.css">
+    
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+
+<body>
+<div class="main">
+	<header class="header">
+		<div class="header-left">
+			<div class="sidebar-toggle"><i class="icon icon-bars"></i></div>
+			<div class="logo">z-<span class="text-primary">admin</span></div>
+		</div>
+		<div class="header-search">
+			<form method="post">
+				<div class="search-group">
+					<i class="icon icon-search"></i>
+					<input type="text" class="form-control" placeholder="搜点什么吧...">
+				</div>
+			</form>
+		</div>
+		<div class="header-user">
+			<div class="item dropdown">
+				<span class="badge label label-dot label-danger"></span>
+				<i class="icon icon-comments"></i>
+			</div>
+			<div class="item dropdown">
+				<span class="badge label label-dot label-warning"></span>
+				<i class="icon icon-bell-alt"></i>
+			</div>
+			<div class="item dropdown">
+				<span data-toggle="dropdown">
+					<i class="icon icon-user"></i>
+					<span>大豆比</span>
+					<span class="caret"></span>
+				</span>
+				<ul class="dropdown-menu pull-right">
+      				<li>
+			            <a href="#">修改头像</a>
+			          </li>
+		          	<li>
+		            	<a href="#">修改资料</a>
+		          	</li>
+          <li class="divider"></li>
+          <li>
+            <a href="#">注销</a>
+          </li>
+        </ul>
+			</div>
+		</div>
+	</header>
+	<aside class="sidebar">
+		<div class="sidebar-menu">
+			<div class="item">
+				<a href="#">
+					<i class="icon icon-dashboard"></i>
+					<span>主页</span>
+				</a>
+			</div>
+			<div class="item">
+				<a href="#">
+					<i class="icon icon-bell-alt"></i>
+					<span>消息中心</span>
+				</a>
+			</div>
+			<div class="item vertical">
+				<a href="#">
+					<i class="icon icon-cogs"></i>
+					<span>网站设置</span>
+					<span class="arrow"></span>
+				</a>
+				<div class="vertical-menu">
+											<a href="#">分类一</a>
+						<a href="#">分类二</a>
+						<a href="#">分类三</a>
+									</div>
+			</div>
+			<div class="item vertical open active">
+				<a href="#">
+					<i class="icon icon-server"></i>
+					<span>栏目管理</span>
+					<span class="arrow"></span>
+				</a>
+				<div class="vertical-menu">
+					<a href="#">分类一</a>
+					<a href="#" class="active">分类二</a>
+					<a href="#">分类三</a>
+				</div>
+			</div>
+			<div class="item vertical">
+				<a href="#">
+					<i class="icon icon-user"></i>
+					<span>会员管理</span>
+					<span class="arrow"></span>
+				</a>
+				<div class="vertical-menu">
+					<a href="#">分类一</a>
+					<a href="#">分类二</a>
+					<a href="#">分类三</a>
+				</div>
+			</div>
+			<div class="item vertical">
+				<a href="#">
+					<i class="icon icon-shopping-cart"></i>
+					<span>商城管理</span>
+					<span class="arrow"></span>
+				</a>
+				<div class="vertical-menu">
+					<a href="#">分类一</a>
+					<a href="#">分类二</a>
+					<a href="#">分类三</a>
+				</div>
+			</div>
+			<div class="item vertical">
+				<a href="#">
+					<i class="icon icon-cubes"></i>
+					<span>插件管理</span>
+					<span class="arrow"></span>
+				</a>
+				<div class="vertical-menu">
+					<a href="#">分类一</a>
+					<a href="#">分类二</a>
+					<a href="#">分类三</a>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<div class="main-content">
+		<div class="wrapper">
+			<ol class="breadcrumb">
+  				<li><a href="#"><i class="icon icon-home"></i> 主页</a></li>
+  				<li><a href="#">栏目管理</a></li>
+  				<li class="active">栏目列表</li>
+			</ol>
+			<div class="panel">
+				<div class="panel-heading"><h5>数据表格</h5></div>
+				<div class="panel-body">
+                    <table id="example" class="display table" width="100%">
+                        <thead>
+                            <tr>
+                               <th></th>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Extn.</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                               <th></th>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Extn.</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript" src="bower_components/zui/dist/lib/jquery/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/zui/dist/js/zui.js"></script>
+	<script type="text/javascript" src="bower_components/datatables.net/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="bower_components/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+	<script type="text/javascript" src="bower_components/datatables.net-select/js/dataTables.select.js"></script>
+	<script type="text/javascript" src="js/admin.js"></script>
+	<script type="text/javascript" src="js/data_tables.js"></script>
+</body>
+</html>
